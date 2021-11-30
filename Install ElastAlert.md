@@ -8,6 +8,20 @@ sudo apt-get update && sudo apt-get install filebeat
 ```
 [Install Filebat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html) 
 
+```
+sudo cd /opt
+sudo git clone https://github.com/Yelp/elastalert.git
+cd elastalert
+sudo python3 setup.py install
+sudo pip install PyOpenSSL
+sudo pip install "elasticsearch>=5.0.0"
+```
+
+### Config ElastAlert
+```
+sudo cp config.yaml.example config.yaml
+```
+
 ### Configure Filebeat and enable system module
 Edit filebeat configuration and update kibana and elasticsearch url
 ```
